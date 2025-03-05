@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    background: linear-gradient();
+    background-image: url(images/adbac.png);
+    background-size: cover;
+    background-position: center;
+
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+
+    height: 500px;
+    width: 800px;
+    border: 1px solid black;
+    margin: auto; 
+    margin-top: 100px;
+
+   
+
+}
+.form
+{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background-color: white;
+}
+
+.form h1{
+    font-size: 2rem;
+    margin: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.field{
+    padding: 12px;
+    width: 65%;
+    margin: 15px;
+    border: 1px solid black;
+    outline: none;
+}
+button{
+    padding: 10px 20px;
+    width: 40%;
+    margin-top: 40px;
+    background-color: green;
+    color: whitesmoke;
+    font-weight: bolder;
+    outline: none;
+    border-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: red;
+}
+.side{
+    display: flex;
+    width: 50%;
+   
+}
+.side img{
+   
+     width: 398px;
+    background-color: white;
+    border-left: 2px solid black;
+}
+p{
+    margin-top: 20px;
+}
+@media (max-width: 468px) {
+    .side {
+        display: none;
+    }
+    .container{
+        margin-left: 20px;
+    }
+}

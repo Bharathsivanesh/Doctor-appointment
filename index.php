@@ -1,0 +1,334 @@
+<?php
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROYAL CARE HOSPITAL</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+        /* General Reset and Base Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+/* Body Style */
+body {
+  font-family: Arial, sans-serif;
+  background: url(images/mainbac.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #e0f7ff; /* Light blue background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-icon img {
+  height: 50px;
+  width: 200px;
+}
+
+/* Navbar */
+nav.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #0077b6; /* Blue color */
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+nav.navbar a:hover {
+  color: #0288d1; /* Lighter blue */
+}
+
+nav.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #0077b6;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+  box-shadow: 2px 2px 5px #0077b6, 0 0 5px #0077b6;
+}
+
+nav.navbar a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Right Button Styling */
+.right button {
+  padding: 10px 25px;
+  font-size: 16px;
+  background: transparent;
+  border: 2px solid #0077b6;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.right a {
+  text-decoration: none;
+  color: #0077b6;
+}
+
+.right button:hover {
+  background-color: #0077b6;
+}
+
+.right button:hover a {
+  color: white;
+}
+
+/* Headings */
+.fst {
+  color: #4ac2ff; /* Light blue */
+}
+
+.snd {
+  color: #0077b6; /* Blue */
+  margin-left: 20px;
+}
+
+.appo {
+  margin-left: 30px;
+  margin-top: 30px;
+  font-family: "Oswald";
+  font-weight: 900;
+  font-size: 30px;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 160px;
+  border-radius: 10px;
+}
+
+.content-container {
+  margin-top: 80px;
+  margin-left: 20px;
+  color: #4ac2ff;
+}
+
+.image-container img {
+  height: 500px;
+  width: 550px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.button-link {
+  background-color: #0077b6;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+.btn a:hover {
+  background-color: #0288d1;
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+  color: #0077b6;
+}
+
+/* Responsive CSS */
+/* Mobile Devices (Max width 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .appo {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .main-container {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .content-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Tablet Devices (Min width 768px and Max width 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Desktops (Min width 1024px) */
+@media (min-width: 1024px) {
+  .main-container {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .content-container {
+    margin-top: 50px;
+  }
+
+  .image-container img {
+    height: 500px;
+    width: auto;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- <div class="left-icon">
+        <img src="images/mainroyal.jpg" alt="Logo" width="50px" />
+      </div> -->
+      <nav class="navbar" id="navbar">
+        <a href="main.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="about.html#facilities">FACILITIES</a>
+        <a href="mailto:bharathsivanesh@gmail.com">CONTACT</a>
+      </nav>
+      <div class="right">
+        <button><a href="adlogin.html">ADMIN</a></button>
+        <button><a href="doclogin.html">DOCTOR</a></button>
+      </div>
+      <!-- Hamburger menu icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <h1 class="appo">
+      <span class="fst">APPOINTMENT</span> <span class="snd">MANAGEMENT</span>
+    </h1>
+    <div class="main-container">
+      <div class="content-container">
+        <h2 >Welcome to Our Hospital Doctor Appointment System</h2>
+        <br />
+        <p>
+          Our hospital doctor appointment system is designed to simplify the
+          process of scheduling medical appointments, ensuring a seamless
+          experience for both patients and healthcare providers.
+        </p>
+        <br />
+        <div class="btn">
+          <a href="patlogin.html" class="button-link">ASK APPOINTMENT</a>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="images/freepik-export-20240601071544t9pI.png" alt="Doctor" />
+      </div>
+    </div>
+
+    <script>
+     
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          var navbar = document.getElementById("navbar");
+          navbar.classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>PATIENT LOGIN</title>
+        <link rel="stylesheet" href="patlogin.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+            <form method="post" action="patlogin.php" enctype="multipart/form-data" autocomplete="off">
+              
+               <div class="image">
+                <img src="images/admin.png" width="100" height="100" autocomplete="off">
+               </div>
+               <h2>PATIENT LOGIN</h2>
+               <div class="content">
+                 <label>ENTER USER ID</label>
+                 <input type="text"  name="id" required autocomplete="off">
+                 <br>
+                 <label >ENTER PASSWORD</label>
+                 <input type="password" name="pass" required autocomplete="off">
+                 <br>
+                 <input type="submit" value="Login" autocomplete="off">
+                 <br>
+                 <a href="patient.html">Don't Have account</a>
+               </div>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

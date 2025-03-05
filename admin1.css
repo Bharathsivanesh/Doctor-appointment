@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/adminn1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container{
+    background: rgba(0,0,0,0.2);
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  
+   
+}
+h2{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 20px;
+    border-bottom: 3px solid white;
+}
+form{
+    padding-top: 20px;
+  
+    
+}
+.form label{
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    width: 140px;
+    padding-top: 20px;
+    
+}
+.form input{
+    padding: 4px 0px; 
+     border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.form select{
+    padding: 4px 0px;
+    border: none;
+    margin-left: 8px;
+    width: 185px;
+    border-radius: 5px;
+
+
+}
+#btn{
+    background-color: green;
+    color: white;
+    margin-top: 30px;
+    margin-left: 40%;
+    border-bottom: none;
+    padding: 10px 25px;
+    font-weight: bolder;
+    border-radius: 5px;   
+}
+.radio{
+    color: white;
+    font-size: 20px;    
+}
+#female{
+    margin-left: 20px;
+}
+ input:focus{
+    /* border: 2px solid red; */
+    border: none;
+}
+
+#btn:hover{
+   
+    background-color: red;
+    cursor: pointer;
+}

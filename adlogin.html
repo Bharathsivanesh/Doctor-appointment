@@ -1,0 +1,49 @@
+ <html>
+    <head>
+        <title>ADMIN LOGIN</title>
+        <link rel="stylesheet" href="adlogin.css">
+        <link rel="icon" href="images/adicon.png">  
+    </head>
+    <body>
+     
+        <div class="container">  
+        <form class="form" method="post" onsubmit="func(event)" autocomplete="off" >
+            <h1>ADMIN LOGIN</h1> 
+        <input type="text" placeholder="Enter Admin id" class="field" required id="id" autocomplete="off">
+    
+    
+        <input type="password" placeholder="Enter Admin password" class="field" required id="pass" autocomplete="off">
+       
+        <button type="submit">LOGIN</button>
+        <p id="pa"></p>
+        </form>
+        <div class="side">
+            <img src="images/admin.png">
+        </div>
+        </div>
+       
+    <script>
+          function func(event)
+          {
+             event.preventDefault();
+            var id=document.getElementById('id').value;
+            var pass=document.getElementById('pass').value;
+            var msg=document.getElementById('pa');  // for coloring the error mesage in red
+            if(id=='cse' && pass=='123')
+            {
+                msg.textContent="Login Sucessful";
+                msg.style.color='green';
+                window.location.href="admin.html";
+            }
+            else{
+                
+                msg.textContent="Invalid id";
+                msg.style.color='red';
+            }
+            
+          }
+    </script>
+    </body>
+</html>
+ 
+ 

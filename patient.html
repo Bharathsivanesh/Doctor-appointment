@@ -1,0 +1,77 @@
+
+<html>
+    <head>
+        <title>Doctor credentials</title>
+        <link rel="stylesheet" href="patient.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/alertify.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/themes/default.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <h2>Patient Registration</h2>
+             <form action="patient.php" method="post" enctype="multipart/form-data" autocomplete="off">
+                <label>Patient Name</label>
+                <input type="text"  name="name" required autocomplete="off">
+                <br>
+                <label>Blood Group</label>
+                <select name="bg">
+                    <option name="bg">O+ve</option>
+                    <option name="bg">O-ve</option>
+                    <option name="bg">A+ve</option>
+                    <option name="bg">A-ve</option>
+                    <option name="bg">AB-ve</option>
+                    <option name="bg">AB+ve</option>
+                    <option name="bg">B-ve</option>
+                    <option name="bg">B+ve</option>
+                 </select>
+                <br>
+                <label>DOB</label>
+                <input type="date"  name="dob" required autocomplete="off">
+                 
+                <br>
+               
+                <label>Email</label>
+               
+                <input type="email"  name="mail" required autocomplete="off">
+                <br>
+                <div class="radio">
+                <label>Patient Gender</label>
+                <input type="radio" name="gender" value="Male"  id="male" required autocomplete="off">Male
+                <input type="radio" name="gender" value="Fe Male" id="female" autocomplete="off">Female
+                </div>
+              
+                <label>Mobile No</label>
+                <input type="number" name="mob" required autocomplete="nope">
+                <br>
+                <label>Address</label>
+                <input type="text" name="address" required autocomplete="nope">
+                <br>
+                <label>Id</label>
+                <input type="text"  name="id" required autocomplete="off">
+                <br>
+                <label>Password</label>
+                <input type="password"  name="pass" required autocomplete="off">
+                <br>
+                <input type="file" required  name="image" autocomplete="off" >
+
+                <input type="submit" value="Submit" name="submit" id="btn">
+             </form>
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/alertifyjs/build/alertify.min.js"></script>
+        <script>
+            window.onload = function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('status') === 'success') {
+                    alertify.set('notifier','position', 'top-center');
+                    alertify.success('Successfully added', 2); 
+                    setTimeout(() => {
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                    }, 2000); 
+                }
+             };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOCTOR LOGIN</title>
+    <link rel="stylesheet" href="doclogin.css">
+    <link rel="icon" href="images/docicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs/build/css/themes/default.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="side">
+            <img src="images/doc.png">
+        </div>
+        <form class="form" id="loginForm" action="doctorlogin.php" method="post">
+            <h1>DOCTOR LOGIN</h1>
+            <input type="text" class="field" placeholder="Enter id" name="id" required>
+            <input type="password" placeholder="Enter password" name="pass" class="field" required>
+            <input type="submit" class="btn" value="LOGIN">
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs/build/alertify.min.js"></script>
+    <script>
+         window.onload = function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('status') === 'fail') {
+                    alertify.set('notifier','position', 'top-center');
+                    alertify.error('Invalid Id', 2); 
+                    setTimeout(() => {
+                    urlParams.delete('status');
+                    const newurl=window.location.pathname +'?'+ urlParams.toString();
+                    window.history.replaceState({},document.title,newurl);
+                    
+                }, 2000);
+                }
+            }
+    </script>
+
+    
+</body>
+</html>
