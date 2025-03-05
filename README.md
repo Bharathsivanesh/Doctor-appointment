@@ -66,11 +66,12 @@ Import the hospital_db.sql file.
 
 Open config.php
 
-Screenshots
-![Image](https://github.com/user-attachments/assets/f763ea92-e87f-4333-af72-6770934f1746)
-
 Set database credentials (DB_HOST, DB_USER, DB_PASS, DB_NAME).
 
 🌐 Run the Project:
 
 Open a browser and go to: http://localhost/php_project/
+
+Screenshots
+![Image](https://github.com/user-attachments/assets/f763ea92-e87f-4333-af72-6770934f1746)
+![Image](https://github.com/user-attachments/assets/fd31375d-e450-4429-b27e-a321c402efa2)
